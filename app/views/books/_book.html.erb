@@ -3,7 +3,7 @@
 <div class="container mt-3">
   <h2>New book</h2>
     <div>
-      <%= form_for book, url: {controller: "books", action: "create"}, class: 'new_book', id: 'new_book' do |f| %>
+      <%= form_with model: book, class: 'new_book', id: 'new_book' do |f| %>
       <div class="form-group">
         <%= f.label :title, "Title" %>
         <%= f.text_field :title, value: '', id: 'book_title', class: "form-control" %>
